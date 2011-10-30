@@ -1,0 +1,72 @@
+body {
+	font-family: cursive;
+	background-color: cornsilk;
+	color: teal;
+}
+
+#title_caption {
+    width: 100%;
+	font-size: 50px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#travellers_container, #providers_container {
+    float: left;
+	width: 49.8%;
+	text-align: center;
+	font-size: 35px;
+	border: 1px solid;
+	height: 83%;
+}
+
+#container_title {
+    border-bottom: 1px solid;
+}
+
+#search_box_info {
+    font-size: 23px;
+	padding-top: 25px;
+}
+
+#search_box {
+    width: 80%;
+	height: 40px;
+}
+
+#description_title {
+	padding-top: 25px;
+	font-size: 23px;
+	text-align: center;
+	padding-left: 15px
+}
+
+#project_description {
+    height: 250px;
+	width: 80%;
+}
+
+#incentives_container {
+    padding-top: 8px;
+	padding-left: 15px;
+}
+
+#incentives_title {
+    text-align: left;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.incentive {
+    float: left;
+	margin-top: 11px;
+}
+
+.incentive_type {
+    width: 95%;
+	float: left;
+	text-align: left;
+	padding-left: 5px;
+	font-size: 20px;
+	padding-top: 7px;
+}
