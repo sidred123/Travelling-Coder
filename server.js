@@ -10,4 +10,4 @@ _.each(_.keys(routes), function (route) {
 
 server.use(express.staticProvider(__dirname + '/public'));
 
-server.listen(8888);
+server.listen(12371);
