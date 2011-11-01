@@ -1,6 +1,6 @@
 
 var run = function (request, response) {
-    response.render("index.haml");
+    response.render('index');
 }
 
 exports.run = run;
