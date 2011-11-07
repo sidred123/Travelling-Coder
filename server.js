@@ -9,9 +9,9 @@ console.log(routes);
 var server = express.createServer();
 
 server.set('views', __dirname + '/views');
-server.set('view engine', 'haml');
+server.set('view engine', 'jade');
 /* https://github.com/visionmedia/express/issues/620 */
-server.register('.haml', require('hamljs'));
+// server.register('.haml', require('jade'));
 
 
 server.configure(function () {
