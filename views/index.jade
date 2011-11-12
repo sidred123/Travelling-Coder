@@ -2,12 +2,15 @@ html
   head
     title='Travelling Coder'
     link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src='/javascript/3p/jquery-1.7.min.js')
+    script(src='/javascript/index.js')
   body
     #container
       #travellers_container
         #container_title Travellers
         #search_box_info Enter the name of the place you want to travel to.
         <input id="search_box"></input>
+        <input id="search_submit" type="submit" value="Search">
       #providers_container
         #container_title Providers
         #description_title Provide a description of the project:
@@ -22,3 +25,4 @@ html
           .incentive_type Food
           <input class="incentive" type="checkbox" value="Other">
           .incentive_type Other
+        <input id="project_submit" type="submit" value="Submit">
