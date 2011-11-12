@@ -10,7 +10,11 @@ var server = express.createServer();
 
 server.set('views', __dirname + '/views');
 server.set('view engine', 'jade');
-/* https://github.com/visionmedia/express/issues/620 */
+server.set('view options', {layout: false});
+
+server.use(express.static(__dirname + '/public'));
+
+/* https://github.com/visionmedia/express/issues/622 */
 // server.register('.haml', require('jade'));
 
 
