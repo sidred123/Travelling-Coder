@@ -3,7 +3,13 @@ var _ = require('underscore')._;
 var express = require('express');
 
 var routes = require('./routes').routes;
-console.log(routes);
+
+var mongo = require('mongodb');
+var db = new mongo.Db('travelling_coder', new mongo.Server('localhost', 27017, {}, {}));
+db.open(function () {
+    console.log("mongo db is now open.");
+});
+
 
 
 var server = express.createServer();
@@ -19,11 +25,15 @@ server.use(express.static(__dirname + '/public'));
 
 
 server.configure(function () {
-	server.use('views', __dirname + '/views');
+    server.use('views', __dirname + '/views');
 });
 
-_.each(_.keys(routes), function (route) {
-	server.get(route, routes[route]);
+_.each(routes, function (route) {
+    if (route.isGet) { 
+        server.get(route.url, route.handler);
+    } else {
+        server.post(route.url, route.handler);
+    }
 });
 
 server.listen(12371);
