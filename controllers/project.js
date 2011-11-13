@@ -7,6 +7,8 @@ var save = function (request, response) {
         projectText += data;
     });
     request.on('end', function () {
+        projectText = projectText.replace('text=', '');
+        projectText = projectText.replace(/\+/g, ' ');
         db.collection('projects', function (err, collection) {
             console.log("fetched projects collection.");
             var project = {

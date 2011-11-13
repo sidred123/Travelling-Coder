@@ -5,8 +5,9 @@ var searchSubmitHandler = function () {
         type: 'GET',
         url: '/search',
         data: {text: searchText},
-        success: function () {
+        success: function (data) {
             console.log("success in search.");
+            $('#results_container').append(data);
         },
         error: function () {
             console.log("failure in search.");
