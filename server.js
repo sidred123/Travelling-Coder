@@ -4,13 +4,7 @@ var express = require('express');
 
 var routes = require('./routes').routes;
 
-var mongo = require('mongodb');
-var db = new mongo.Db('travelling_coder', new mongo.Server('localhost', 27017, {}, {}));
-db.open(function () {
-    console.log("mongo db is now open.");
-});
-
-
+var db = require('./db').db;
 
 var server = express.createServer();
 

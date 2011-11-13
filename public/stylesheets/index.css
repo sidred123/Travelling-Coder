@@ -13,11 +13,12 @@ body {
 
 #travellers_container, #providers_container {
     float: left;
-	width: 49.8%;
-	text-align: center;
-	font-size: 35px;
-	border: 1px solid;
-	height: 100%;
+    width: 49.8%;
+    text-align: center;
+    font-size: 35px;
+    border: 1px solid;
+    height: 100%;
+    overflow: scroll;
 }
 
 #container_title {

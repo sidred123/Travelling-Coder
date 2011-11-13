@@ -1,11 +1,12 @@
 var controllers = require('./controllers/controllers').controllers;
 
-var _project = function (path) {
+var _project = function (request, response) {
     console.log("project needs to be saved");
+    controllers.project.save(request, response);
 };
 
 var _index = function (request, response) {
-   controllers.index.run(request, response);
+    controllers.index.run(request, response);
 };
 
 var routes = [
