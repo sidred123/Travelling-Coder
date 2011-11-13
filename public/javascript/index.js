@@ -1,5 +1,17 @@
 var searchSubmitHandler = function () {
     console.log("Search button clicked.");
+    var searchText = $("#search_box").val();
+    $.ajax({
+        type: 'GET',
+        url: '/search',
+        data: {text: searchText},
+        success: function () {
+            console.log("success in search.");
+        },
+        error: function () {
+            console.log("failure in search.");
+        }
+    });
 };
 
 var projectSubmitHandler = function () {
