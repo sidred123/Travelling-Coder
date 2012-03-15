@@ -29,5 +29,5 @@ _.each(routes, function (route) {
         server.post(route.url, route.handler);
     }
 });
-
-server.listen(21155);
+var port = process.env.PORT;
+server.listen(port);
