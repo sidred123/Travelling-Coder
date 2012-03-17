@@ -10,6 +10,10 @@ var save = function (request, response) {
         projectText = projectText.replace('text=', '');
         projectText = projectText.replace(/\+/g, ' ');
         db.collection('projects', function (err, collection) {
+            if (err !== null) {
+                console.log("Error fetching projects: " + err);
+                return;
+            }
             console.log("fetched projects collection.");
             var project = {
                 'text' : projectText
